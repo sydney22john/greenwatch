@@ -1,7 +1,7 @@
--- goose Up
+-- +goose Up
 CREATE TABLE greenwashers (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    comany_name TEXT NOT NULL UNIQUE,
+    company_name TEXT NOT NULL UNIQUE
 );
 
 CREATE TABLE domains (
@@ -18,7 +18,7 @@ CREATE TABLE offenses (
     greenwasher_id INTEGER REFERENCES greenwashers (id) ON DELETE CASCADE
 );
 
--- goose Down
+-- +goose Down
 DROP TABLE greenwashers;
 DROP TABLE domains;
 DROP TABLE offenses;
