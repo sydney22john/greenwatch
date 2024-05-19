@@ -17,6 +17,5 @@ func runServer(port string) {
 		Handler: mux,
 	}
 
-	// log.Fatalln(s.ListenAndServe())
-	_ = s
+	log.Fatalln(s.ListenAndServe())
 }
