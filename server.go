@@ -14,7 +14,7 @@ func runServer(port string) {
 
 	s := http.Server{
 		Addr:    port,
-		Handler: mux,
+		Handler: middlewareCors(mux),
 	}
 
 	log.Fatalln(s.ListenAndServe())
